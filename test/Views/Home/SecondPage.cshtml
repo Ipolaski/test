@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@model List<LoanItem>
+
+<script src="../js/SecondPage.js"></script>
+
+<table class="table" id="table" onclick="alertdata(@Model[0].ToString())">
+    <tr>
+        <th>#</th>
+        <th class="tableHead">Дата платежа</th>
+        <th class="tableHead">Сумма платежа</th>
+        <th class="tableHead">Основной долг</th>
+        <th class="tableHead">Проценты</th>
+        <th class="tableHead">Остаток долга</th>
+    </tr>
+    @for (var i = 0; i < @Model.Count; i++)
+    {
+        <tr>
+            <td>@(i+1)</td>
+            <td>@Model[i].Date</td>
+            <td>@Model[i].AmountOfPayment</td>
+            <td>@Model[i].MainDebt</td>
+            <td>@Model[i].InterestRate</td>
+            <td>@Model[i].BalanceOwed</td>
+        </tr>
+    }
+</table>

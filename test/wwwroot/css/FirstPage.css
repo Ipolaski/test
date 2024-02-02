@@ -1,0 +1,16 @@
+﻿.form {
+	max-width: 80%;
+}
+.formLabel {
+	text-align: end;
+}
+
+.checkboxPadding {
+	padding: 0.5em;
+	align-self: center;
+}
+
+.submitButton {
+	max-width: min-content;
+	margin: auto;
+}
