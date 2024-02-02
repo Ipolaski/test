@@ -77,11 +77,11 @@ namespace test.Controllers
             var countOfPayments = loanTerm / paymentStep;
             for (int i = 0; i < countOfPayments; i++)
             {
-                percentPart = loanBalance * periodProcents;
-                bodyPart = annuityMonthPayment - percentPart;
-
                 if (loanBalance < annuityMonthPayment)
                     annuityMonthPayment = loanBalance;
+
+                percentPart = loanBalance * periodProcents;
+                bodyPart = annuityMonthPayment - percentPart;
 
                 loanBalance -= annuityMonthPayment;
 
@@ -98,11 +98,11 @@ namespace test.Controllers
 
             for (int i = 0; i < loanTerm; i++)
             {
-                percentPart = loanBalance * monthPrecent;
-                bodyPart = annuityMonthPayment - percentPart;
-
                 if (loanBalance < annuityMonthPayment)
                     annuityMonthPayment = loanBalance;
+
+                percentPart = loanBalance * monthPrecent;
+                bodyPart = annuityMonthPayment - percentPart;
 
                 loanBalance -= annuityMonthPayment;
 
